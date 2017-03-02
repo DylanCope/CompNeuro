@@ -34,10 +34,10 @@ def voltage_time_graph( neuron, dt, T ):
     fig, ax = plt.subplots()
     ax.set_ylabel( 'Voltage (V)' )
     ax.set_xlabel( 'Time (s)' )
+    ax.set_ylim([ neuron.V_r - 0.01, neuron.V_t + 0.01 ])
     ax.plot( ts, vs )
 
     plt.show()
-
 
 if __name__ == '__main__':
 
