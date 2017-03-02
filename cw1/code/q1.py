@@ -1,6 +1,4 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from operator import iadd
 
 class Neuron:
 
@@ -21,21 +19,14 @@ class Neuron:
         '''
 
         dvdt = (self.E_L - self.V + self.R_m * self.I_e) / self.tau_m
-        if self.V < self.V_t:
-            self.V = self.V + dvdt * dt
-        else:
+        self.V = self.V + dvdt * dt
+
+        if self.V >= self.V_t:
             self.V = self.V_r
 
         return self.V
 
-if __name__ == '__main__':
-
-    # Using the integrate and fire model this code plots voltage in the cell over time, no firing behaivour or refractory rest period is simulated for simplicity. Once the membrane potential exceeds threshold it's value is set to V_r
-
-    neuron = Neuron()
-
-    dt = 1e-3 # s (time step for Euler method)
-    T = 1 # s (finish time simulation)
+def voltage_time_graph( neuron, dt, T ):
 
     ts = [ i * dt for i in range( 1 + int( T / dt ) ) ]
     vs = [ neuron.update(dt) for t in ts ]
@@ -46,3 +37,15 @@ if __name__ == '__main__':
     ax.plot( ts, vs )
 
     plt.show()
+
+
+if __name__ == '__main__':
+
+    # Using the integrate and fire model this code plots voltage in the cell over time, no firing behaivour or refractory rest period is simulated for simplicity. Once the membrane potential exceeds threshold it's value is set to V_r
+
+    neuron = Neuron()
+
+    dt = 1e-3 # s (time step for Euler method)
+    T = 1 # s (finish time simulation)
+
+    voltage_time_graph( neuron, dt, T )
