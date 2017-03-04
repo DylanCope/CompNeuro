@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from numpy import arange
 
 class Neuron:
 
@@ -13,6 +14,7 @@ class Neuron:
 
         # neuron variables
         self.V = self.V_r # V (internal voltage within the neuron)
+        self.num_spikes = 0
 
     def update( self, dt ):
         ''' updates and returns the neuron's internal voltage value, the updated value represents the voltage at the next time step
@@ -23,21 +25,28 @@ class Neuron:
 
         if self.V >= self.V_t:
             self.V = self.V_r
+            self.num_spikes += 1
 
         return self.V
 
-def voltage_time_graph( neuron, dt, T ):
+    def reset( self ):
+        ''' sets the internal voltage to the preset rest voltage '''
+        self.V = self.V_r
+        self.num_spikes = 0
 
-    ts = [ i * dt for i in range( 1 + int( T / dt ) ) ]
+def simulate_neuron( neuron, dt, T ):
+    ''' simulates a neuron over a given time
+    '''
+    ts = arange( 0, T, dt )
     vs = [ neuron.update(dt) for t in ts ]
+    return ts, vs, neuron
 
-    fig, ax = plt.subplots()
+def voltage_time_graph( ax, neuron, dt, T ):
+    ts, vs, neuron = simulate_neuron( neuron, dt, T )
     ax.set_ylabel( 'Voltage (V)' )
     ax.set_xlabel( 'Time (s)' )
     ax.set_ylim([ neuron.V_r - 0.01, neuron.V_t + 0.01 ])
     ax.plot( ts, vs )
-
-    plt.show()
 
 if __name__ == '__main__':
 
@@ -48,4 +57,7 @@ if __name__ == '__main__':
     dt = 1e-3 # s (time step for Euler method)
     T = 1 # s (finish time simulation)
 
-    voltage_time_graph( neuron, dt, T )
+    fig, ax = plt.subplots()
+    voltage_time_graph( ax, neuron, dt, T )
+    print( 'number of spikes = %d' % neuron.num_spikes )
+    plt.show()
