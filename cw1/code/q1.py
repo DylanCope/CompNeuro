@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 from numpy import arange
 
 class Neuron:
+    '''
+        A class to hold the properties of a neuron being simulated under a constant injected current.
+    '''
 
     def __init__( self ):
 
@@ -16,6 +19,10 @@ class Neuron:
         self.V = self.V_r # V (internal voltage within the neuron)
         self.num_spikes = 0
 
+    def fire( self ):
+        self.V = self.V_r
+        self.num_spikes += 1
+
     def update( self, dt ):
         ''' updates and returns the neuron's internal voltage value, the updated value represents the voltage at the next time step
         '''
@@ -24,8 +31,7 @@ class Neuron:
         self.V = self.V + dvdt * dt
 
         if self.V >= self.V_t:
-            self.V = self.V_r
-            self.num_spikes += 1
+            self.fire()
 
         return self.V
 
