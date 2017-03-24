@@ -17,17 +17,22 @@ class Neuron:
 
         # neuron variables
         self.V = self.V_r # V (internal voltage within the neuron)
+        self.I = self.I_e # A ()
         self.num_spikes = 0
 
     def fire( self ):
         self.V = self.V_r
         self.num_spikes += 1
 
+    def input_current( self ):
+        return self.I_e
+
     def update( self, dt ):
         ''' updates and returns the neuron's internal voltage value, the updated value represents the voltage at the next time step
         '''
 
-        dvdt = (self.E_L - self.V + self.R_m * self.I_e) / self.tau_m
+        I = self.input_current()
+        dvdt = (self.E_L - self.V + self.R_m * I) / self.tau_m
         self.V = self.V + dvdt * dt
 
         if self.V >= self.V_t:

@@ -17,10 +17,14 @@ class ConnectedNeuron( SimpleNeuron ):
         self.E_L = -70e-3 # mV (leak potential)
         self.V_r = -80e-3 # mV (rest voltage)
         self.V_t = -54e-3 # mV (spiking threshold)
-        self.RI = 18e-3 # mV (the product of the membrane resistance R_m and the injected curent I_e)
+
+        self.RmIe = 18e-3 # mV (the product of the membrane resistance R_m and the injected curent I_e)
+        self.I_e = self.RmIe / self.R_m
 
         # synaptic parameters
-        self.Rg = 0.15 # (the product of the membrane resistance R_m and a constant g_s which describes the 'strength' of a synapse)
+        self.Rmgs = 0.15 # (the product of the membrane resistance R_m and a constant g_s which describes the 'strength' of a synapse)
+        self.g_s = self.Rmgs / self.R_m
+
         self.P = 0.5
         self.tau_s = 10e-3 #ms
         self.E_s = 0 # V (reverse potential) if 0 then the neuron is excitatory, if -80e-3 it is inhibitory
@@ -34,21 +38,23 @@ class ConnectedNeuron( SimpleNeuron ):
         super( ConnectedNeuron, self ).fire()
         self.s += self.P
 
-    def alpha_function( self ):
+    def output_current( self ):
         ''' Returns the post-synaptic conductivity given the current state of the neuron.
         '''
-        g_s = self.Rg / self.R_m
-        return g_s * self.s * (self.E_s - self.V)
+        return self.g_s * self.s * (self.E_s - self.V)
+
+    def input_current( self ):
+        ''' Overrides the input current function to include the output of the input neuron
+        '''
+        return self.input_neuron.output_current() + self.I_e
 
     def update( self, dt ):
-        ''' Given the change in time since the last call to this method, the internal state of the neuron and returns the current internal voltage.
+        ''' Given the change in time since the last call to this method, the internal state of the neuron is updated and the internal voltage is returned.
         '''
         # Using Euler's method to compute the updated post-synaptic conductance
         dsdt = - self.s / self.tau_s
         self.s = self.s + dsdt * dt
 
-        I = self.RI / self.R_m
-        self.I_e = self.input_neuron.alpha_function() + I
         return super( ConnectedNeuron, self ).update( dt )
 
 def choose_rand_voltage( n ):
@@ -87,7 +93,8 @@ def cosimulate_neurons( neurons, dt, T ):
 
 def plot_and_cosimulate( neurons ):
 
-    ts, vss, neurons = cosimulate_neurons( neurons, 1e-3, 0.2 )
+    ts, vss, neurons = cosimulate_neurons( neurons, 1e-3, 1 )
+
     vs1 = [ v1 for v1, v2 in vss ]
     vs2 = [ v2 for v1, v2 in vss ]
 
@@ -115,7 +122,7 @@ if __name__ == '__main__':
     print( 'Case b:')
     seed( sd )
     n1, n2 = connect_two_neurons()
-    n1.E_s = n2.E_s = 80e-3 # mV
+    n1.E_s = n2.E_s = -80e-3 # mV
     plot_and_cosimulate([ n1, n2 ])
     print( 'Neuron 1 spike count: %d' % n1.num_spikes )
     print( 'Neuron 2 spike count: %d' % n2.num_spikes )

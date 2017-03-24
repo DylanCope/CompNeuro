@@ -53,6 +53,15 @@
 
 \section*{Question 2}
 
+As we're modelling the neuron with a constant injected current $I_e$, we can solve the integrate and fire model for $t$, and constrain the equation such that at $t=1$, $V(t)=V_T$ and at $t=0$, $V(t) = V_r$.
+\begin{align}
+  V(t) &= E_L + R_m I_e + [V(0) - E_L - R_m I_e]\; e^{-t/\tau_m}\\
+  V(1) = V_T &= E_L + R_m I_e + [V_r - E_L - R_m I_e]\; e^{-1/\tau_m}\\
+  (V_T - E_L)\; e^{1/\tau_m} + E_L - V_r &= I_e\; (R_m e^{1/\tau_m} - R_m)\\
+  I_e &= \frac{(V_T - E_L)\; e^{1/\tau_m} + E_L - V_r}{R_m e^{1/\tau_m} - R_m}
+\end{align}
+Therefore using the values outlined in Q1 for the variables in equation (4) to compute $I_e$, we find that the minimum value that $I_e$ can be to at least cause a single spike in a one second simulation is 3.0 nA.
+
 \section*{Question 3}
 
 \begin{figure}[H]
@@ -66,9 +75,22 @@
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\linewidth]{figures/q4}
+  \caption{Fire rate per second plotted against input current to the neuron.}
 \end{figure}
 
 \section*{Question 5}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/q5a}
+  \caption{Internal neuron voltage against time for simulating a single neuron, showing thirty spikes over the course of 1 s.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/q5b}
+  \caption{Internal neuron voltage against time for simulating a single neuron, showing thirty spikes over the course of 1 s.}
+\end{figure}
 
 \section*{Question 6}
 
