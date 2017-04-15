@@ -24,6 +24,9 @@
 \usepackage{color}
 \usepackage{listings}
 \usepackage{xifthen}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \setlength{\parskip}{\baselineskip}
 
@@ -43,11 +46,9 @@
 
 \section*{Question 1}
 
-% Simulate an integrate and fire model with the following parameters for 1 s: $\tau_m = 10 $ms, $E_L = V_r = -70$ mV, $V_t = -40$ mV, $R_m= 10$ M$\Omega$, $I_e = 3.1 $ nA. Use Euler's method with timestep $\delta t = 1$ ms. Here $E_L$ is the leak potential, $V_r$ is the reset voltage, $V_t$ is the threshold, $R_m$ is the membrane resistance, that is one over the conductance, and $\tau_m$ is the membrane time constant. Plot the voltage as a function of time. For simplicity assume that the neuron does not have a refractory period after producing a spike. [20\% of marks]. You do not need to plot spikes - once membrane potential exceeds threshold, simply set the membrane potential to $V_r$.
-
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\linewidth]{figures/q1}
+  \includegraphics[width=0.5\linewidth]{figures/q1}
   \caption{Internal neuron voltage against time for simulating a single neuron, showing thirty spikes over the course of 1 s.}
 \end{figure}
 
@@ -66,30 +67,32 @@ Therefore using the values outlined in Q1 for the variables in equation (4) to c
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\linewidth]{figures/q3}
-  \caption{Simulation of a neuron for 1 s with an input current of amplitude $I_e$ which is 0.1 [nA] lower than the minimum current computed in question 2.}
+  \includegraphics[width=0.5\linewidth]{figures/q3}
+  \caption{Simulation of a neuron for 1 s with an input current of amplitude $I_e$ which is 0.1 [nA] lower than the minimum current computed in question 2. As shown the voltage fails to exceed the spiking threshold throughout the simulation.}
 \end{figure}
 
 \section*{Question 4}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\linewidth]{figures/q4}
-  \caption{Fire rate per second plotted against input current to the neuron.}
+  \includegraphics[width=0.5\linewidth]{figures/q4}
+  \caption{Fire rate per second plotted against input current to the neuron. This further verifies the results of question 2 and 3 as prior to an input current of 3.0 nA there is a fire rate of 0.}
 \end{figure}
 
 \section*{Question 5}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{figures/q5a}
-  \caption{Internal neuron voltage against time for simulating a single neuron, showing thirty spikes over the course of 1 s.}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{figures/q5b}
-  \caption{Internal neuron voltage against time for simulating a single neuron, showing thirty spikes over the course of 1 s.}
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/q5a}
+    \caption{Internal neuron voltage against time for simulating two excitatory neurons feeding into one another over the course of 1 s. The graph shows that when one neuron fires it causes a notable boost in membrane potential for the other neuron. This in turn causes the post-synaptic neuron to spike sooner than it would have otherwise, the ultimate result of which is to cause the firing of both neurons to happen synchronously.}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/q5b}
+    \caption{Internal neuron voltage against time for simulating a single neuron, showing thirty spikes over the course of 1 s. This graph shows that when one neuron spikes there is a decrase in gradient of the other's membrane potential with respect to time}
+  \end{subfigure}
 \end{figure}
 
 \section*{Question 6}

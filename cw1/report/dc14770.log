@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.23)  24 MAR 2017 11:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.23)  24 MAR 2017 16:58
 entering extended mode
 **./dc14770.tex
 (dc14770.tex
@@ -917,23 +917,49 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ifmtarg\ifmtarg.sty"
 Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
-)) (dc14770.aux)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen275
+\captionmargin@=\dimen276
+\captionwidth=\dimen277
+\caption@tempdima=\dimen278
+\caption@indent=\dimen279
+\caption@parindent=\dimen280
+\caption@hangindent=\dimen281
+)
+\c@ContinuedFloat=\count169
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: hypcap package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+\c@subfigure=\count170
+\c@subtable=\count171
+) (dc14770.aux)
 \openout1 = `dc14770.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -970,18 +996,18 @@ LaTeX Font Info:    ... okay on input line 37.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 40.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count169
+\c@section@level=\count172
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
 
 (dc14770.out) (dc14770.out)
 \@outlinefile=\write4
@@ -990,16 +1016,16 @@ LaTeX Info: Redefining \nameref on input line 37.
  ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count170
-\scratchdimen=\dimen275
+\scratchcounter=\count173
+\scratchdimen=\dimen282
 \scratchbox=\box102
-\nofMPsegments=\count171
-\nofMParguments=\count172
+\nofMPsegments=\count174
+\nofMParguments=\count175
 \everyMPshowfont=\toks59
-\MPscratchCnt=\count173
-\MPscratchDim=\dimen276
-\MPnumerator=\count174
-\makeMPintoPDFobject=\count175
+\MPscratchCnt=\count176
+\MPscratchDim=\dimen283
+\MPnumerator=\count177
+\makeMPintoPDFobject=\count178
 \everyMPtoPDFconversion=\toks60
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1014,16 +1040,18 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@lstlisting=\count176
-LaTeX Font Info:    Try loading font information for U+stmry on input line 43.
+\c@lstlisting=\count179
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 46.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1031,60 +1059,40 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <figures/q1.png, id=6, 578.16pt x 427.1157pt>
 File: figures/q1.png Graphic file (type png)
  <use figures/q1.png>
-Package pdftex.def Info: figures/q1.png used on input line 50.
-(pdftex.def)             Requested size: 483.69687pt x 357.32791pt.
- [1
+Package pdftex.def Info: figures/q1.png used on input line 51.
+(pdftex.def)             Requested size: 241.84843pt x 178.66396pt.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}pdfTeX warning (ext4): dest
-ination with the same identifier (name{figure.1}) has been already used, duplic
-ate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.62 \end{align}
-                 <./figures/q1.png>]
-<figures/q3.png, id=22, 578.16pt x 427.1157pt>
+<figures/q3.png, id=8, 578.16pt x 427.1157pt>
 File: figures/q3.png Graphic file (type png)
  <use figures/q3.png>
-Package pdftex.def Info: figures/q3.png used on input line 69.
-(pdftex.def)             Requested size: 483.69687pt x 357.32791pt.
+Package pdftex.def Info: figures/q3.png used on input line 70.
+(pdftex.def)             Requested size: 241.84843pt x 178.66396pt.
+ [1
 
-<figures/q4.png, id=23, 578.16pt x 427.1157pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/q1.png>]
+<figures/q4.png, id=31, 578.16pt x 427.1157pt>
 File: figures/q4.png Graphic file (type png)
  <use figures/q4.png>
-Package pdftex.def Info: figures/q4.png used on input line 77.
-(pdftex.def)             Requested size: 483.69687pt x 357.32791pt.
- [2pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
- has been already used, duplicate ignored
+Package pdftex.def Info: figures/q4.png used on input line 78.
+(pdftex.def)             Requested size: 241.84843pt x 178.66396pt.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.80 
-      <./figures/q3.png>] <figures/q5a.png, id=39, 722.7pt x 716.1957pt>
+<figures/q5a.png, id=32, 722.7pt x 716.1957pt>
 File: figures/q5a.png Graphic file (type png)
+ <use figures/q5a.png>
+Package pdftex.def Info: figures/q5a.png used on input line 87.
+(pdftex.def)             Requested size: 229.75526pt x 227.69014pt.
 
-<use figures/q5a.png>
-Package pdftex.def Info: figures/q5a.png used on input line 85.
-(pdftex.def)             Requested size: 483.69687pt x 479.34593pt.
- [3pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.88 
-      <./figures/q4.png>] <figures/q5b.png, id=47, 722.7pt x 716.1957pt>
+<figures/q5b.png, id=33, 722.7pt x 716.1957pt>
 File: figures/q5b.png Graphic file (type png)
+ <use figures/q5b.png>
+Package pdftex.def Info: figures/q5b.png used on input line 93.
+(pdftex.def)             Requested size: 229.75526pt x 227.69014pt.
 
-<use figures/q5b.png>
-Package pdftex.def Info: figures/q5b.png used on input line 91.
-(pdftex.def)             Requested size: 483.69687pt x 479.34593pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 85--96
+[][]   [] 
+ []
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.94 
-      <./figures/q5a.png>] (dc14770.bbl
+[2 <./figures/q3.png> <./figures/q4.png>] (dc14770.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
@@ -1092,46 +1100,41 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 \tf@thm=\write5
 \openout5 = `dc14770.thm'.
 
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.102 \end{document}
-                     <./figures/q5b.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+ [3 <./figures/q5a.png> <./figures/q5b.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (dc14770.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `dc14770.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19643 strings out of 493334
- 352062 string characters out of 3139251
- 442418 words of memory out of 3000000
- 22772 multiletter control sequences out of 15000+200000
- 13013 words of font info for 52 fonts, out of 3000000 for 9000
+ 20700 strings out of 493334
+ 371539 string characters out of 3139251
+ 464661 words of memory out of 3000000
+ 23823 multiletter control sequences out of 15000+200000
+ 13313 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,54p,712b,15524s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,54p,483b,16491s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy8.pfb>
-Output written on dc14770.pdf (5 pages, 561301 bytes).
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y8.pfb>
+Output written on dc14770.pdf (3 pages, 584065 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
+ 94 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

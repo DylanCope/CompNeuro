@@ -7,10 +7,10 @@ class ConnectedNeuron( SimpleNeuron ):
     '''
         A class to hold the properties of a neuron being simulated under the input current of the.
     '''
-    def __init__( self, other ):
+    def __init__( self ):
         super( ConnectedNeuron, self ).__init__()
 
-        self.input_neuron = other
+        self.input_neuron = None
 
         # membrane parameters
         self.tau_m = 20e-3 # ms (membrane time constant)
@@ -67,9 +67,10 @@ def connect_two_neurons():
     '''
         Initialise setup for two excitatory connected neurons with default parameters and random initial voltages
     '''
-    n1 = ConnectedNeuron( None )
-    n2 = ConnectedNeuron( n1 )
+    n1 = ConnectedNeuron()
+    n2 = ConnectedNeuron()
     n1.input_neuron = n2
+    n2.input_neuron = n1
     # n1.V = choose_rand_voltage( n1 )
     # n2.V = choose_rand_voltage( n2 )
     n1.V = n1.V_r
@@ -93,7 +94,7 @@ def cosimulate_neurons( neurons, dt, T ):
 
 def plot_and_cosimulate( neurons ):
 
-    ts, vss, neurons = cosimulate_neurons( neurons, 1e-3, 1 )
+    ts, vss, neurons = cosimulate_neurons( neurons, 1e-3, 0.5 )
 
     vs1 = [ v1 for v1, v2 in vss ]
     vs2 = [ v2 for v1, v2 in vss ]
@@ -123,6 +124,16 @@ if __name__ == '__main__':
     seed( sd )
     n1, n2 = connect_two_neurons()
     n1.E_s = n2.E_s = -80e-3 # mV
+    plot_and_cosimulate([ n1, n2 ])
+    print( 'Neuron 1 spike count: %d' % n1.num_spikes )
+    print( 'Neuron 2 spike count: %d' % n2.num_spikes )
+
+    # Case (b): An inhibitory neuron and an excitatory neuron feeding into one another, simulated over one second
+    print( 'Case b:')
+    seed( sd )
+    n1, n2 = connect_two_neurons()
+    n1.E_s = -80e-3 # mV
+
     plot_and_cosimulate([ n1, n2 ])
     print( 'Neuron 1 spike count: %d' % n1.num_spikes )
     print( 'Neuron 2 spike count: %d' % n2.num_spikes )
