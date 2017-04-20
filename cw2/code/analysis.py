@@ -22,27 +22,31 @@ def plot_correlations():
     fig, axs = plt.subplots( 4, 4 )
     frs = [ fire_rate(load( 'neuron%d' % i ))
             for i in range( 1, 5 ) ]
+    ts = load( 'time' )
+    ts = ( ts - ts[ 0 ] ) / 1e4
     max_steps = max( fr.size for fr in frs )
     frs = [ np.concatenate(( fr, np.zeros((max_steps - fr.size)) ))
             for fr in frs ]
-    kernel = np.ones(100) / 100
+    kernel = np.ones( 100 ) / 100
+    n = 1200
     for i, j in product( range(1, 5), range(1, 5) ):
         x = frs[ i - 1 ]
         y = frs[ j - 1 ]
         cor = np.correlate( x, y, mode = 'full' )
         cor_smooth = np.convolve( cor, kernel, mode = 'same' )
-        cor = cor[ cor.size // 2 : ][ : 1200 ]
-        cor_smooth  = cor_smooth[ cor_smooth.size // 2 : ][ : 1200 ]
+        cor = cor[ cor.size // 2 : ][ : n ]
+        cor_smooth  = cor_smooth[ cor_smooth.size // 2 : ][ : n ]
         ax = axs[ i - 1, j - 1 ]
-        ax.plot( cor, c='b', alpha=0.5 )
-        ax.plot( cor_smooth, c='r' )
-        ax.set_xlabel( 'Lag ($10^{-4} s$)' );
+        ax.plot( ts[ : n ], cor, c='b', alpha=0.5 )
+        ax.plot( ts[ : n ], cor_smooth, c='r' )
+        ax.set_xlabel( 'Lag ($s$)' )
         if i == j:
             ax.set_title( 'Auto-correlation for Neuron %d' % i )
-            ax.set_ylabel( 'Fire Rate Auto-correlation ($10^{-4} s^{-2}$)' )
+            ax.set_ylabel( 'Fire Rate Auto-correlation ($s^{-2}$)' )
         else:
-            ax.set_title( 'Cross-correlation between Neurons %d and %d' % (i, j) )
-            ax.set_ylabel( 'Fire Rate Cross-correlation ($10^{-4} s^{-2}$)' )
+            ax.set_title( 'Cross-correlation between Neurons %d and %d'
+                          % (i, j) )
+            ax.set_ylabel( 'Fire Rate Cross-correlation ($s^{-2}$)' )
     plt.show()
 
 def fired_indices( time_stamps, fire_times ):
